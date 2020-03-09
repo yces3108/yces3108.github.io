@@ -1,0 +1,43 @@
+<div id="current-day-info" class="color">
+    <h1 id="app-name-landscape" class="off-color default-cursor center">My Calendar</h1>
+    <div>
+        <h2 id="cur-year" class="current-day-heading dfault-cursor center">{{ year }}</h2>
+    </div>
+    <div class="">
+        <h1 id="cur-day" class="current-day-heading default-cursor center">{{ getWeekDayName(day) }}</h1>
+        <h1 id="cur-month" class="current-day-heading default-cursor center">{{ getMonthName(month) }}</h1>
+        <h1 id="cur-date" class="current-day-heading default-cursor center">{{ date }}{{ ordinal }}</h1>
+    </div>
+    <button id="theme-landscape" class="font button">Change theme</button>
+</div>
+
+<h1 class="center off-color">NTUBT Training Schedule</h1>
+<div id="calendar" class="calendar center">
+    <h4 id="cal-year" class="center off-color">{{ calendarYear }}</h4>
+    <div id="calendar-month-buttons" class="button">
+        <i class="fas fa-caret-left icon" (click)="showPreviousMonth()"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></i>
+        <h3 id="cal-month" (click)="showThisMonth()">{{ getMonthName(calendarMonth) }}</h3>
+        <i class="fas fa-caret-right icon" (click)="showNextMonth()"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></i>
+    </div>
+    <h5 class="weekday border-color">Sun</h5>
+    <h5 class="weekday border-color">Mon</h5>
+    <h5 class="weekday border-color">Tue</h5>
+    <h5 class="weekday border-color">Wed</h5>
+    <h5 class="weekday border-color">Thu</h5>
+    <h5 class="weekday border-color">Fri</h5>
+    <h5 class="weekday border-color">Sat</h5>
+    <!--calendarDateArray
+        [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42]-->
+    <!--<div class="day" *ngFor="let thisDate of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42]">
+        <p>{{ thisDate }}</p>
+        <app-calendar-date></app-calendar-date>
+    </div>-->
+    <div class="day" *ngFor="let thisDate of calendarDateArray">
+        <p>{{ thisDate.getDate() }}</p>
+        <app-calendar-date [today]="thisDate"></app-calendar-date>
+    </div>
+</div>
+
+<script language="JavaScript">
+    updateData(); //更新日期相關資料
+</script>

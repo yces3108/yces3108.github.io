@@ -1,0 +1,23 @@
+
+<header>
+    <a class="nav-img" href="https://www.facebook.com/ntubt/"><img src="assets\隊徽.png" width="100px" alt="隊徽" href="https://www.facebook.com/ntubt/"></a>
+    <nav class="nav-menu">
+      <ul>
+        <li class="nav-button"><a 
+          [routerLink]="path.home" 
+          >首頁</a></li>
+        <li class="nav-button"><a 
+          [routerLink]="path.login"
+          >登入</a></li>
+        <li class="nav-button"><a 
+          [routerLink]="path.calendar"
+          >日程表</a></li>
+      </ul>
+    </nav>
+</header>
+
+<router-outlet></router-outlet>
+
+<footer>
+  <h1>徹底消滅敵人，勇奪大專冠軍。</h1>
+</footer>

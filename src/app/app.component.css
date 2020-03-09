@@ -1,0 +1,139 @@
+header {
+    font-weight: bold;
+}
+
+header a {
+    color: inherit; /* 移除超連結顏色 */
+    text-decoration: none;  /* 移除超連結底線 */
+}
+.nav-menu {
+    display: inline-block;
+}
+.nav-button {
+    display: inline-block;
+    list-style-type: none;
+    margin: 5px 10px;
+    border: 3px solid rgb(39,60,86);
+    border-radius: 5px; 
+    padding: 5px 10px;
+    color: rgb(39,60,86);
+    font-size: 1.2rem;
+}
+.nav-button:hover {
+    background-color: rgb(39,60,86);
+    color: white;
+}
+
+.content {
+}
+
+h1 {
+    margin: 0 auto;
+    padding: 10px 0;   
+    text-align: center;
+}
+
+
+.default-cursor {
+    cursor: default;
+}
+.center {
+    text-align: center;
+}
+.button{
+    border-radius: 500px;
+    outline: none;
+    margin: 0 auto;
+    background-color: Transparent;
+}
+.color {
+    color: #FEFDFD;
+    background-color: rgb(39,60,86);
+}
+.off-color {
+    color: #7c7EFB;
+}
+.calendar {
+    height: 500px;
+    display: grid;
+    grid-template: 30px 20px 50px repeat(6, auto) / repeat(7, 1fr);
+}
+#cal-year {
+    grid-area: 1 / 1 / span 1 / span 7;
+}
+#calendar-month-buttons {
+    grid-area: 2 / 1 / span 1 / span 7;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#calendar-month-buttons .icon {
+    padding: 0 20px;
+}
+#cal-month {
+    width: 100px;
+}
+.calendar .weekday {
+    font-size: 16px;
+    font-weight: 300;
+    padding: 10px;
+    margin: 5px;
+}
+
+.calendar .day {
+    padding: 5px; 
+    border: 1px solid rgb(39,60,86);
+    border-radius: 10px;
+    margin: 5px 5px;
+    box-shadow: 1px 1px 2px rgb(39,60,86);
+}
+
+.calendar .day:hover {
+    box-shadow: 5px 5px 3px rgb(39,60,86);
+    transition: border .2s ease;
+}
+.calendar .day:active {
+    background-color: rgb(108,166,214);
+    box-shadow: 5px 5px 3px rgb(39,60,86);
+    transition: border .1s ease;
+}
+
+.calendar #current-day {
+  background-color: #E1E1E1;
+}
+.calendar img {
+    width: 3.8vw;
+    vertical-align: top;
+    position: relative;
+    top: 0.5vw;
+    /* left: 12px; */
+}
+.day-table {
+    display: none;
+}
+.day-section {
+}
+
+.tooltip span {
+  display: none;
+}
+
+.tooltip:hover {
+  cursor: help;
+  position: relative;
+}
+
+.tooltip:hover span {
+  display: block;
+  font-size: 1vw;
+  padding: 6px;
+  white-space: pre-wrap;
+  width: 12vw;
+  z-index: 100;
+  background-color: #EDEDED;
+  color: black;
+  border-radius: 6px;
+  left: 2vw;
+  top: 4vw;
+  position: absolute;
+}
